@@ -1,9 +1,9 @@
 import sbtcrossproject.CrossPlugin.autoImport.{ crossProject, CrossType }
 
-val mainScala = "2.12.11"
-val allScala  = Seq("2.13.2", mainScala)
+val mainScala = "2.13.2"
+val allScala  = Seq("2.13.2")
 
-val akkaVersion           = "2.6.8"
+val akkaVersion           = "2.5.31"
 val catsEffectVersion     = "2.1.4"
 val circeVersion          = "0.13.0"
 val http4sVersion         = "0.21.7"
@@ -122,7 +122,7 @@ lazy val codegenSbt = project
   .settings(commonSettings)
   .settings(
     sbtPlugin := true,
-    crossScalaVersions := Seq("2.12.11"),
+    crossScalaVersions := Seq("2.13.2"),
     testFrameworks := Seq(new TestFramework("zio.test.sbt.ZTestFramework")),
     libraryDependencies ++= Seq(
       "dev.zio" %% "zio-test-sbt" % zioVersion % "test"
