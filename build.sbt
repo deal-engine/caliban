@@ -1,7 +1,7 @@
 import sbtcrossproject.CrossPlugin.autoImport.{ crossProject, CrossType }
 
-val mainScala = "2.12.11"
-val allScala  = Seq("2.13.2", mainScala)
+val mainScala = "2.13.2"
+val allScala  = Seq(mainScala, "2.12.11")
 
 val akkaVersion           = "2.6.8"
 val catsEffectVersion     = "2.1.4"
